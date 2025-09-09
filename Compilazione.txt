@@ -1,0 +1,24 @@
+Install some dependencies:
+    sudo apt update
+    sudo apt install python3-venv
+    sudo apt install ninja-build
+    sudo apt install pkg-config
+    sudo apt install libglib2.0-dev
+    sudo apt install bzip2 python3-pip libfdt-dev
+    sudo apt install libpixman-1-dev zlib1g-dev
+
+
+
+Qemu compilation qemu: 
+    cd qemu
+    ./configure --target-list=arm-softmmu
+    make -j$(nproc)
+
+    Verify that your custom board has been registered in QEMU: ./build/qemu-system-arm --machine help | grep s32k3x8evb
+
+
+FreeRTOS compilation APP:
+    cd APP
+    make clean
+    make all
+    make qemu_start

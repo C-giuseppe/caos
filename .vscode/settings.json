@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "*.dbclient-js": "javascript",
+        "armv7m.h": "c",
+        "log.h": "c",
+        "boards.h": "c",
+        "error.h": "c",
+        "error-report.h": "c",
+        "qdev-properties.h": "c"
+    }
+}
